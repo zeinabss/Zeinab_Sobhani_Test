@@ -77,7 +77,7 @@ class TLRUCache:
 
     
 if __name__ == '__main__':
-    lru=TLRUCache(3)
+    lru=TLRUCache(capacity=3,ttu=20)
     lru.put(1,1)
     lru.put(2,2)
     lru.get(1)
