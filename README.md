@@ -21,20 +21,13 @@ Question C
 At Ormuco, we want to optimize every bits of software we write. Your goal is to write a new library that can be integrated to the Ormuco stack. Dealing with network issues everyday, latency is our biggest problem. Thus, your challenge is to write a new Geo Distributed LRU (Least Recently Used) cache with time expiration. This library will be used extensively by many of our services so it needs to meet the following criteria:
 
  
-
-    1 - Simplicity. Integration needs to be dead simple.
-
-    2 - Resilient to network failures or crashes.
-
-    3 - Near real time replication of data across Geolocation. Writes need to be in real time.
-
-    4 - Data consistency across regions
-
-    5 - Locality of reference, data should almost always be available from the closest region
-
-    6 - Flexible Schema
-
-    7 - Cache can expire
+1 - Simplicity. Integration needs to be dead simple.
+2 - Resilient to network failures or crashes.
+3 - Near real time replication of data across Geolocation. Writes need to be in real time.
+4 - Data consistency across regions
+5 - Locality of reference, data should almost always be available from the closest region
+6 - Flexible Schema
+7 - Cache can expire
     
 Please find the solution in the Python (.py) or Jupyter (.ipynb) folders under the name "TLRUCache". The test cases is shown in the Jupyter Notebook file. 
 In this solution, LRU method was used to remove the key values when the capacity is full. The LRU has an expiry time for all the keys, from the time they are added to the cache. 
